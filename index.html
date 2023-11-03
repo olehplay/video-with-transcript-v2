@@ -1,181 +1,178 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
-    <style>
-      /* Custom Player Styles */
-      .custom-player .plyr--video .plyr__controls {
-        background-color: #1e2635;
-        padding-bottom: 15px;
-        padding-top: 15px;
-      }
+<link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
+<style>
+  /* Custom Player Styles */
+  .custom-player .plyr--video .plyr__controls {
+    background-color: #1e2635;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
 
-      .custom-player .plyr__control {
-        color: #ff8a00;
-      }
+  .custom-player .plyr__control {
+    color: #ff8a00;
+  }
 
-      .custom-player .plyr__control:hover,
-      .custom-player .plyr--video .plyr__control[aria-expanded="true"] {
-        color: white;
-      }
+  .custom-player .plyr__control:hover,
+  .custom-player .plyr--video .plyr__control[aria-expanded="true"] {
+    color: white;
+  }
 
-      .custom-player .plyr__progress--played {
-        background-color: #4f5e77;
-      }
+  .custom-player .plyr__progress--played {
+    background-color: #4f5e77;
+  }
 
-      .custom-player .plyr__progress--buffer {
-        background-color: #36445c;
-      }
+  .custom-player .plyr__progress--buffer {
+    background-color: #36445c;
+  }
 
-      .custom-player .plyr__volume--display {
-        color: #ff8a00;
-      }
+  .custom-player .plyr__volume--display {
+    color: #ff8a00;
+  }
 
-      .custom-player .plyr__control.plyr__tab-focus,
-      .custom-player .plyr__control[aria-expanded="true"] {
-        background-color: #ff8a00;
-        color: #323232;
-      }
+  .custom-player .plyr__control.plyr__tab-focus,
+  .custom-player .plyr__control[aria-expanded="true"] {
+    background-color: #ff8a00;
+    color: #323232;
+  }
 
-      .custom-player .plyr__menu__value[data-value="0.5"] {
-        color: #ff8a00;
-      }
+  .custom-player .plyr__menu__value[data-value="0.5"] {
+    color: #ff8a00;
+  }
 
-      .custom-player .plyr__controls .plyr__controls__item.plyr__time {
-        font-size: 16px;
-        font-family: "Hind Siliguri", sans-serif;
-      }
+  .custom-player .plyr__controls .plyr__controls__item.plyr__time {
+    font-size: 16px;
+    font-family: "Hind Siliguri", sans-serif;
+  }
 
-      .custom-player .plyr__menu__container .plyr__control > span {
-        font-family: "Hind Siliguri", sans-serif;
-        align-items: inherit;
-        display: flex;
-        width: 100%;
-        color: #36445c;
-        font-size: 16px;
-      }
+  .custom-player .plyr__menu__container .plyr__control > span {
+    font-family: "Hind Siliguri", sans-serif;
+    align-items: inherit;
+    display: flex;
+    width: 100%;
+    color: #36445c;
+    font-size: 16px;
+  }
 
-      .custom-player .plyr__control--overlaid svg {
-        left: 5px;
-        position: relative;
-        fill: white;
-        width: 40px;
-        height: 40px;
-        margin: 10px;
-      }
+  .custom-player .plyr__control--overlaid svg {
+    left: 5px;
+    position: relative;
+    fill: white;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+  }
 
-      .custom-player .plyr__progress .plyr__tooltip {
-        font-size: 16px;
-        font-family: "Hind Siliguri", sans-serif;
-      }
+  .custom-player .plyr__progress .plyr__tooltip {
+    font-size: 16px;
+    font-family: "Hind Siliguri", sans-serif;
+  }
 
-      .custom-player .plyr__progress input[type="range"] {
-        cursor: pointer;
-      }
+  .custom-player .plyr__progress input[type="range"] {
+    cursor: pointer;
+  }
 
-      .custom-player .plyr__control {
-        color: white;
-      }
+  .custom-player .plyr__control {
+    color: white;
+  }
 
-      .plyr__control.plyr__control--overlaid {
-        background-color: #ff8a00;
-      }
+  .plyr__control.plyr__control--overlaid {
+    background-color: #ff8a00;
+  }
 
-      .custom-player .plyr__progress input[type="range"] {
-        color: #ff8a00;
-      }
+  .custom-player .plyr__progress input[type="range"] {
+    color: #ff8a00;
+  }
 
-      .custom-player .plyr__volume input[type="range"] {
-        color: #ff8a00;
-        cursor: pointer;
-      }
+  .custom-player .plyr__volume input[type="range"] {
+    color: #ff8a00;
+    cursor: pointer;
+  }
 
-      .custom-player .plyr__control:hover {
-        background-color: #ff8a00;
-        color: white !important;
-      }
+  .custom-player .plyr__control:hover {
+    background-color: #ff8a00;
+    color: white !important;
+  }
 
-      .custom-player
-        .plyr__menu__container
-        .plyr__control[role="menuitemradio"][aria-checked="true"]:before {
-        background-color: #ff8a00;
-      }
+  .custom-player
+    .plyr__menu__container
+    .plyr__control[role="menuitemradio"][aria-checked="true"]:before {
+    background-color: #ff8a00;
+  }
 
-      .custom-player .plyr__control:hover span {
-        color: white;
-      }
+  .custom-player .plyr__control:hover span {
+    color: white;
+  }
 
-      .plyr--video {
-        border: 3px solid #4f5e77;
-        border-radius: 10px;
-      }
+  .plyr--video {
+    border: 3px solid #4f5e77;
+    border-radius: 10px;
+  }
 
-      /* Custom Transcript Styles */
-      .transcript {
-        margin-top: 20px;
-        padding: 10px;
-        line-height: 1.5;
-        height: 200px;
-        overflow-y: auto;
-        border: 3px solid #4f5e77;
-        border-radius: 10px;
-        background-color: white;
-      }
+  /* Custom Transcript Styles */
+  .transcript {
+    margin-top: 20px;
+    padding: 10px;
+    line-height: 1.5;
+    height: 200px;
+    overflow-y: auto;
+    border: 3px solid #4f5e77;
+    border-radius: 10px;
+    background-color: white;
+  }
 
-      .highlight {
-        background-color: #ff8a00;
-        color: white;
-        font-weight: 600;
-        padding: 5px;
-        transition: 0.2s ease-in;
-      }
+  .highlight {
+    background-color: #ff8a00;
+    color: white;
+    font-weight: 600;
+    padding: 5px;
+    transition: 0.2s ease-in;
+  }
 
-      .my-hidden {
-        display: none;
-      }
+  .my-hidden {
+    display: none;
+  }
 
-      .show-transcript-btn {
-        margin-top: 30px;
-        background-color: #ff8a00;
-        font-family: inherit;
-        font-size: 18px;
-        font-weight: 600;
-        color: white;
-        border-radius: 20px;
-        padding: 7px 14px;
-        cursor: pointer;
-        border: none;
-        transition: 0.5s ease-in-out;
-      }
+  .show-transcript-btn {
+    margin-top: 30px;
+    background-color: #ff8a00;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    border-radius: 20px;
+    padding: 7px 14px;
+    cursor: pointer;
+    border: none;
+    transition: 0.5s ease-in-out;
+  }
 
-      .show-transcript-btn:hover {
-        background-color: #d27204;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="custom-player">
-      <video width="100%" controls>
-        <!-- Change the value for the src attribute into yours link -->
-        <source
-          src="https://codefinity-content-media.s3.eu-west-1.amazonaws.com/code-1/react-pro/react-router/suspense-recording.mp4"
-          type="video/mp4"
-          data-plyr-config='{
+  .show-transcript-btn:hover {
+    background-color: #d27204;
+  }
+</style>
+<body onload="handleLoadPage()">
+  <div class="custom-player">
+    <video width="100%" controls>
+      <!-- Change the value for the src attribute into yours link -->
+      <source
+        src="https://codefinity-content-media.s3.eu-west-1.amazonaws.com/code-1/react-pro/react-router/suspense-recording.mp4"
+        type="video/mp4"
+        data-plyr-config='{
           "quality": {
             "default": "720",
             "options": ["144", "240", "360", "480", "720", "1080"]
           }
         }'
-        />
-      </video>
-    </div>
-    <button class="show-transcript-btn js-show-transcript-btn">
-      Show Transcript
-    </button>
-    <div class="transcript my-hidden"></div>
+      />
+    </video>
+  </div>
+  <button class="show-transcript-btn js-show-transcript-btn">
+    Show Transcript
+  </button>
+  <div class="transcript my-hidden"></div>
 
-    <script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
-    <script>
+  <script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
+  <script>
+    const handleLoadPage = () => {
       const showTranscriptBtn = document.querySelector(
         ".js-show-transcript-btn"
       );
@@ -348,6 +345,6 @@
         .join("");
 
       transcriptElement.innerHTML = transcriptHTML;
-    </script>
-  </body>
-</html>
+    };
+  </script>
+</body>
